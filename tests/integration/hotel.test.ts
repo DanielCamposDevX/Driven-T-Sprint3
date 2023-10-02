@@ -159,11 +159,12 @@ describe('Get /Hotels/:hotelId', () => {
     const response = await server.get(`/hotels/${hotel.id}`).set('Authorization', `Bearer ${token}`);
     expect(response.status).toBe(httpStatus.OK);
     expect(response.body).toEqual({
-      createdAt: expect.any(String), // Or expect.any(Date) if you want to check the type
+      createdAt: expect.any(String),
       id: expect.any(Number),
       image: expect.any(String),
       name: expect.any(String),
-      updatedAt: expect.any(String), // Or expect.any(Date) if you want to check the type
+      updatedAt: expect.any(String), 
+      Rooms: expect.any(Array)
     });
   });
 });
