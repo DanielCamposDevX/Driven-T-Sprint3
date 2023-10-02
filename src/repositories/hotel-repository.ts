@@ -35,6 +35,9 @@ export async function showHotelsById(id: number) {
     where: {
       id,
     },
+    include: {
+      Rooms: true
+    }
   });
   return hotel;
 }
