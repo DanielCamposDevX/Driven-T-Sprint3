@@ -14,7 +14,6 @@ export async function createSession(token: string): Promise<Session> {
 }
 
 export async function createSessionWithId(token: string, id: number): Promise<Session> {
-
   return prisma.session.create({
     data: {
       token: token,
